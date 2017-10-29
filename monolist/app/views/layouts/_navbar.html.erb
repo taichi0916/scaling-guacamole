@@ -15,9 +15,11 @@
         <% if logged_in? %>
             <li>
               <a href="#">
+                <%= link_to new_item_path do %>
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 アイテムを追加
-                </a>
+                <% end %
+              </a>
             </li>
 
             <li class="dropdown">
@@ -42,7 +44,7 @@
         <li><a href="#">新規登録</a></li>
         <li><a href="#">ログイン</a></li>
         <li><%= link_to '新規登録', signup_path %></li>
-        <li><%= link_to 'ログアウト', logout_path, method: :delete %</li>
+        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
       </ul>
       </div>
     </div>
