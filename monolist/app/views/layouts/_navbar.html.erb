@@ -35,18 +35,16 @@
                   <%= link_to 'マイページ', user_path(current_user) %>
                 </li>
                 <li role="separator" class="divider"></li>
-                <li>
-                  <a href="#">ログアウト</a>
+                   <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
                 </li>
               </ul>
             </li>
           <% else %>
-        <li><a href="#">ログイン</a></li>
-        <li><%= link_to '新規登録', signup_path %></li> 
-        <li><%= link_to 'ログイン', login_path %></li>
-        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
-      </ul>
-      <% end %>
+            <li><%= link_to '新規登録', signup_path %></li> 
+            <li><%= link_to 'ログイン', login_path %></li>
+  
+          <% end %>
+       </ul>
       </div>
     </div>
   </nav>
